@@ -1,0 +1,141 @@
+import JobApplicationForm from './components/JobApplicationForm'
+import JobOpenings from './components/JobOpenings'
+
+export default function App() {
+  return (
+    <div className="min-h-screen animated-bg flex flex-col">
+      {/* Header */}
+      <header className="bg-gradient-to-r from-green-800 to-green-900 text-white shadow-lg backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="flex flex-col items-center justify-center space-y-6">
+            <div className="animate-bounce-in">
+              <h1 className="text-4xl md:text-5xl font-bold text-center">
+                Consulate General of Nigeria Dubai
+              </h1>
+            </div>
+            <div className="animate-slide-up">
+              <p className="text-2xl text-green-100 text-center font-light">
+                Join Our Team - Career Opportunities
+              </p>
+            </div>
+            <div className="mt-8 flex gap-4">
+              <a href="#openings" className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-green-900 bg-white hover:bg-green-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-all duration-300">
+                View Openings
+              </a>
+              <a href="#apply" className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-all duration-300">
+                Submit Application
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* Main Content */}
+      <main className="animate-fade-in flex-grow">
+        {/* Current Openings Section */}
+        <section id="openings" className="py-16 bg-gradient-to-b from-white to-green-50">
+          <JobOpenings />
+        </section>
+
+        {/* Application Form Section */}
+        <section id="apply" className="bg-gradient-to-b from-green-50 to-white py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-green-900 mb-4">
+                Job Application Portal
+              </h2>
+              <div className="max-w-2xl mx-auto">
+                <p className="mt-2 text-gray-700 text-lg leading-relaxed">
+                  Thank you for your interest in joining the Consulate General of Nigeria Dubai.
+                  Please complete the form below with your details.
+                </p>
+              </div>
+              <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm text-gray-600">
+                <div className="flex items-center space-x-2">
+                  <svg className="h-5 w-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Professional Environment</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <svg className="h-5 w-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Competitive Benefits</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <svg className="h-5 w-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Career Growth</span>
+                </div>
+              </div>
+            </div>
+            <JobApplicationForm />
+          </div>
+        </section>
+      </main>
+
+      {/* Footer */}
+      <footer className="bg-gradient-to-r from-green-800 to-green-900 text-white py-8 mt-auto">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+            <div className="text-center md:text-left animate-fade-in">
+              <h3 className="text-lg font-semibold text-green-200">Contact Us</h3>
+              <p className="mt-2 text-sm">Dubai, United Arab Emirates</p>
+              <p className="text-sm">Email: careers@consulnigeria.ae</p>
+            </div>
+            <div className="text-center animate-fade-in">
+              <p className="text-sm text-green-200">
+                © {new Date().getFullYear()} Consulate General of Nigeria Dubai
+                <br />All rights reserved.
+              </p>
+            </div>
+            <div className="text-center md:text-right animate-fade-in">
+              <h3 className="text-lg font-semibold text-green-200">Working Hours</h3>
+              <p className="mt-2 text-sm">Monday - Friday</p>
+              <p className="text-sm">9:00 AM - 5:00 PM</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
+            );
+}
+          </div>
+        </div>
+        <div className="animate-slide-up delay-300">
+          <JobApplicationForm />
+        </div>
+      </main>
+
+      {/* Footer */}
+      <footer className="bg-green-900 bg-opacity-90 text-white mt-auto backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+            <div className="text-center md:text-left animate-fade-in">
+              <h3 className="text-lg font-semibold text-green-200">Contact Us</h3>
+              <p className="mt-2 text-sm">Dubai, United Arab Emirates</p>
+              <p className="text-sm">Email: careers@nigerianconsulatedubai.org</p>
+            </div>
+            <div className="text-center animate-fade-in">
+              <p className="text-sm text-green-200">
+                © {new Date().getFullYear()} Consulate General of Nigeria Dubai
+                <br />All rights reserved.
+              </p>
+            </div>
+            <div className="text-center md:text-right animate-fade-in">
+              <h3 className="text-lg font-semibold text-green-200">Working Hours</h3>
+              <p className="mt-2 text-sm">Monday - Friday</p>
+              <p className="text-sm">9:00 AM - 5:00 PM</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
+
+export default App;

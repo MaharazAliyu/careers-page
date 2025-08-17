@@ -2,7 +2,6 @@ import { useState, useEffect, useMemo } from 'react';
 import type { FormEvent } from 'react';
 import Select from 'react-select';
 import countryList from 'react-select-country-list';
-import { submitApplication } from '../lib/applications';
 
 interface FormData {
   fullName: string;
@@ -102,41 +101,22 @@ export default function JobApplicationForm({ selectedJob }: JobApplicationFormPr
 
     if (validateForm()) {
       try {
-        const { success, error } = await submitApplication(
-          {
-            full_name: formData.fullName,
-            email: formData.email,
-            phone: formData.phone,
-            nationality: formData.nationality,
-            position: formData.position,
-            experience: formData.experience,
-            education: formData.education,
-            passport_number: formData.passportNumber,
-            visa_status: formData.visaStatus,
-            cover_letter: formData.coverLetter
-          },
-          formData.resume as File,
-          formData.coverLetter ? new File([formData.coverLetter], 'cover-letter.txt', { type: 'text/plain' }) : undefined
-        );
-
-        if (success) {
-          setSubmitSuccess(true);
-          setFormData({
-            fullName: '',
-            email: '',
-            phone: '',
-            nationality: '',
-            position: '',
-            experience: '',
-            education: '',
-            resume: null,
-            coverLetter: '',
-            passportNumber: '',
-            visaStatus: ''
-          });
-        } else {
-          console.error('Error submitting application:', error);
-        }
+        // Simulated API call
+        await new Promise(resolve => setTimeout(resolve, 1500));
+        setSubmitSuccess(true);
+        setFormData({
+          fullName: '',
+          email: '',
+          phone: '',
+          nationality: '',
+          position: '',
+          experience: '',
+          education: '',
+          resume: null,
+          coverLetter: '',
+          passportNumber: '',
+          visaStatus: ''
+        });
       } catch (error) {
         console.error('Error submitting form:', error);
       }
